@@ -5,7 +5,7 @@ import {
     Environment,
     Center,
     Text3D,
-    Float
+    Float,
  } from '@react-three/drei'
 import Bicho from './models/Bicho'
 import fontwip from './facetype/Metal Demo_Regular.json'
@@ -47,7 +47,7 @@ export default function Experience()
                     scale={0.5}
                 > 
                     Coming Soon
-                    <meshDepthMaterial /> 
+                    <meshStandardMaterial color={'white'} metalness={1} roughness={0.1}/> 
                 </Text3D>
             </Float>
 

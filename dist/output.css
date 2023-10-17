@@ -3255,12 +3255,12 @@ video {
   z-index: -1;
 }
 
-/* .container{
+.container{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-} */
+}
 
 .placeholder\:text-danger::-moz-placeholder {
   --tw-text-opacity: 1;

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root{
   position: fixed;
   top: 0;
@@ -6,4 +10,11 @@
   height: 100%;
   overflow: hidden;
   z-index: -1;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

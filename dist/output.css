@@ -3260,6 +3260,12 @@ video {
   justify-content: center;
   align-items: center;
   height: 100%;
+  background-color: black;
+}
+
+body
+{
+  background-color: black;
 }
 
 .placeholder\:text-danger::-moz-placeholder {

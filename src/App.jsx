@@ -2,6 +2,7 @@ import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import Experience from "./Experience";
 import Loading from "./Loading";
+import ComingSoon from "./ComingSoon";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,7 +15,8 @@ function App() {
               position: [2, 0, -8],
             }}
           >
-            <Experience />
+            {/* <Experience /> */}
+            <ComingSoon/>
           </Canvas>
         </Suspense>
     </>

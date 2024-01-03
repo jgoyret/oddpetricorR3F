@@ -1,14 +1,12 @@
 
 import { 
     OrbitControls,
-    ContactShadows,
     Environment,
     Center,
-    Text3D,
-    Float,
+    Sparkles
  } from '@react-three/drei'
-import Bicho from './models/Bicho'
-import fontwip from './facetype/Metal Demo_Regular.json'
+ import { PerspectiveCamera } from '@theatre/r3f'
+
 
 
 export default function Experience()
@@ -16,43 +14,31 @@ export default function Experience()
 
     return(
         <>
-            {/* CONFIG */}
-
-            <OrbitControls makeDefault/>
             
-            <Center>
-            {/* ENVIROMENT */}
+            <PerspectiveCamera 
+                theatreKey="Camera" 
+                makeDefault 
+                position={[0, 0, -5]} 
+                fov={75} 
+            />
 
             <Environment
                 background
-                preset='dawn'
-                blur={0.5}
-
+                preset='night'
+                blur={0.9}
             />
 
-            <ContactShadows
-                position={[0,-1,0]}
-                opacity={0.3}
-            />
-
-            {/* MODELS */}
-
-            <Bicho position={[0,1,0]}/>
-
-            <Float>
-                <Text3D 
-                    font={fontwip}
-                    position={[2.,5,0]}
-                    rotation={[0,Math.PI,0]}
-                    scale={0.5}
-                > 
-                    Coming Soon
-                    <meshStandardMaterial color={'white'} metalness={1} roughness={0.1}/> 
-                </Text3D>
-            </Float>
-
+            <Center>
+                <Sparkles
+                    count = {1000}
+                    /** Size of particles (default: randomized between 0 and 1) */
+                    size = {15}
+                    /** The space the particles occupy (default: 1) */
+                    scale = {100}
+                    /** Movement factor (default: 1) */
+                    noise = {0.5}
+                />
             </Center>
-
 
         </>
     )

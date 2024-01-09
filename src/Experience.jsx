@@ -35,16 +35,22 @@ export default function Experience()
                     /** Movement factor (default: 1) */
                     noise = {0.5}
                 />
-                <CriaturasPeleando url={'peleaDeCriaturas.glb'}/>
+                <CriaturasPeleando url={'peleaDeCriaturas.glb'} scale={5}/>
+                <Octopus url={'octopus.glb'} scale={5} position={[-1,0,5]} rotation={[0,1,0]}/>
 
             </ScrollControls>
         </>
     )
 }
 
-function CriaturasPeleando({ url }) 
+function CriaturasPeleando({ url, scale }) 
 {
     const { scene } = useGLTF(url)
-    console.log(scene.scale)
-    return <primitive object={scene} scale={5}/>
+    return <primitive object={scene} scale={scale}/>
+}
+
+function Octopus({ url, position, scale, rotation }) 
+{
+    const { scene } = useGLTF(url)
+    return <primitive object={scene} scale={scale} position={position} rotation={rotation}/>
 }

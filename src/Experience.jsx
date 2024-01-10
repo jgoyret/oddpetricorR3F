@@ -54,3 +54,12 @@ function Octopus({ url, position, scale, rotation })
     const { scene } = useGLTF(url)
     return <primitive object={scene} scale={scale} position={position} rotation={rotation}/>
 }
+
+
+
+// sheetOne.project.ready.then(() =>
+//       sheetOne.sequence.play({ iterationCount: 1, range: [45, 55] }).then(() => {
+//         sheetOne.project.ready.then(() =>
+//           sheetOne.sequence.play({ iterationCount: Infinity, range: [55, 65] }))
+//       }),
+//     );

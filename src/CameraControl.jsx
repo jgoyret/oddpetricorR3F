@@ -8,12 +8,10 @@ export default function CameraControl()
     const sheet = useCurrentSheet();
     const scroll = useScroll();
 
-    // useFrame(() => {
-    //     const sequenceLength = val(sheet.sequence.pointer.length);
-    //     sheet.sequence.position = scroll.offset * sequenceLength;
-    //   });
-
-
+    useFrame(() => {
+        const sequenceLength = val(sheet.sequence.pointer.length);
+        sheet.sequence.position = scroll.offset * sequenceLength;
+      });
 
     return (
         <>

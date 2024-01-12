@@ -1,16 +1,13 @@
 
 import { 
-    OrbitControls,
     Environment,
-    Center,
     Sparkles,
     useGLTF,
-    ScrollControls
- } from '@react-three/drei'
- import { PerspectiveCamera } from '@theatre/r3f'
- import CameraControl from './CameraControl'
-
-
+    ScrollControls,
+    Scroll
+} from '@react-three/drei'
+import CameraControl from './CameraControl'
+import Welcome from './welcome/Welcome'
 
 export default function Experience()
 {
@@ -19,13 +16,16 @@ export default function Experience()
         <>
             <ScrollControls pages={3}  damping={0.1} maxSpeed={0.1}>
 
+                <Scroll html style={{ width: '100%', height: '100%' }}>
+                    <Welcome/>
+                </Scroll>
+
                 <CameraControl/>
                 <Environment
                     background
                     preset='city'
                     blur={0.9}
                 />
-
                 <Sparkles
                     count = {1000}
                     /** Size of particles (default: randomized between 0 and 1) */
